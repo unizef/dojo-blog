@@ -1,11 +1,32 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import Details from "../views/Details.vue";
+import Create from "../views/Create.vue";
+import Tag from "../views/Tag.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/posts/:gap",
+    name: "Details",
+    component: Details,
+    // when linking to Details.vue, you can
+    // access 'id' the route param as a prop
+    props: true,
+  },
+  {
+    path: "/create",
+    name: "Create",
+    component: Create,
+  },
+  {
+    path: "/tags/:tag",
+    name: "Tag",
+    component: Tag,
   },
 ];
 

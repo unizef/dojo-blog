@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "welcome to the new blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "top 5 CSS tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "title": "KADER",
+      "body": "KADERRRRR",
+      "tags": [
+        "kader-ehv"
+      ],
+      "id": 3
+    },
+    {
+      "title": "Area51",
+      "body": "Night club",
+      "tags": [
+        "underground",
+        "techno",
+        "house",
+        "urban"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Courgette Broccoli Soep",
+      "body": "Lekker met veel knof en ui!",
+      "tags": [
+        "soepje",
+        "mjam"
+      ],
+      "id": 5
+    },
+    {
+      "title": "Bianchi",
+      "body": "Tegen de wind in trappelen met een flinke snotneus.",
+      "tags": [
+        "snotneus",
+        "kachelen",
+        "wind",
+        "wielrennen"
+      ],
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<template>
+  <!-- SingelPost.vue -->
+  <div>
+    <div class="post">
+      <!-- each url ends with the id property of posts -->
+      <router-link :to="{ name: 'Details', params: { gap: post.id } }">
+        <!-- render each post title from posts array via the post prop -->
+        <h3>{{ post.title }}</h3>
+      </router-link>
+      <!-- rendering a snippet for each computed post.body -->
+      <p>{{ snippet }}</p>
+      <!-- cycle through posts.tags and render -->
+      <span v-for="tag in post.tags" :key="tag"> #{{ tag }} </span>
+    </div>
+  </div>
+</template>
+
+<script>
+import { computed } from "@vue/runtime-core";
+export default {
+  props: ["post"],
+  setup(props) {
+    const snippet = computed(() => {
+      return props.post.body.substring(0, 100) + "...";
+    });
+    return { snippet };
+  },
+};
+</script>
+
+<style>
+.post {
+  margin: 0 40px 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #e7e7e7;
+}
+.post h3 {
+  display: inline-block;
+  position: relative;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 10px;
+  max-width: 400px;
+}
+
+.post h3::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ff8800;
+  position: absolute;
+  z-index: -1;
+  padding-right: 40px;
+  left: -30px;
+  transform: rotateZ(-1deg);
+}
+
+.post a {
+  text-decoration: none;
+  color: #bbb;
+  margin-left: 4px;
+}
+
+.post a.router-link-hover {
+  color: #444;
+  font-weight: bold;
+}
+</style>
