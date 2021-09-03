@@ -17,12 +17,12 @@ import getPost from "../composables/getPost";
 import Spinner from "../components/Spinner";
 export default {
   // passing the 'gap' route param from index.js as a prop
-  props: ["gap"],
+  props: ["id"],
   components: { Spinner },
   setup(props) {
     // run composable function getPost(), pass route param
     // as an argument and destructure what is returned.
-    const { post, error, load } = getPost(props.gap);
+    const { post, error, load } = getPost(props.id);
 
     // evoke the async data fetch function
     load();

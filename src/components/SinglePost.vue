@@ -3,7 +3,7 @@
   <div>
     <div class="post">
       <!-- each url ends with the id property of posts -->
-      <router-link :to="{ name: 'Details', params: { gap: post.id } }">
+      <router-link :to="{ name: 'Details', params: { id: post.id } }">
         <!-- render each post title from posts array via the post prop -->
         <h3>{{ post.title }}</h3>
       </router-link>

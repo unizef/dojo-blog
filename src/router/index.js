@@ -11,7 +11,7 @@ const routes = [
     component: Home,
   },
   {
-    path: "/posts/:gap",
+    path: "/posts/:id",
     name: "Details",
     component: Details,
     // when linking to Details.vue, you can
